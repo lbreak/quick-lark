@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'shaobo/quick-lark',
+        'name' => 'lbreak/quick-lark',
         'pretty_version' => '1.0.0+no-version-set',
         'version' => '1.0.0.0',
         'reference' => NULL,
@@ -61,7 +61,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'shaobo/quick-lark' => array(
+        'lbreak/quick-lark' => array(
             'pretty_version' => '1.0.0+no-version-set',
             'version' => '1.0.0.0',
             'reference' => NULL,

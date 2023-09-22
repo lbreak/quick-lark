@@ -1,17 +1,17 @@
 <?php
 
-namespace Shaobo\QuickLark\app;
+namespace lbreak\QuickLark\app;
 
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
-use Shaobo\QuickLark\helper\ArrayHelper;
+use lbreak\QuickLark\helper\ArrayHelper;
 
 class BaseApp
 {
     protected $params;
 
     /**
-     * @var \Shaobo\QuickLark\Client
+     * @var \lbreak\QuickLark\Client
      */
     protected $client;
 

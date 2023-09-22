@@ -1,6 +1,6 @@
 <?php
 
-namespace Shaobo\QuickLark\helper;
+namespace lbreak\QuickLark\helper;
 
 class ArrayHelper
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Shaobo\QuickLark\app;
+namespace lbreak\QuickLark\app;
 
 use Exception;
-use Shaobo\QuickLark\interfaces\FolderInterface;
-use Shaobo\QuickLark\map\FolderMap;
+use lbreak\QuickLark\interfaces\FolderInterface;
+use lbreak\QuickLark\map\FolderMap;
 
 class Folder extends BaseApp
 {

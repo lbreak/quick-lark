@@ -1,6 +1,6 @@
 <?php
 
-namespace Shaobo\QuickLark\map;
+namespace lbreak\QuickLark\map;
 
 class BaseMap
 {

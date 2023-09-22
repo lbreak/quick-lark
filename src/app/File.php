@@ -1,11 +1,11 @@
 <?php
 
-namespace Shaobo\QuickLark\app;
+namespace lbreak\QuickLark\app;
 
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
-use Shaobo\QuickLark\interfaces\FolderInterface;
-use Shaobo\QuickLark\map\FolderMap;
+use lbreak\QuickLark\interfaces\FolderInterface;
+use lbreak\QuickLark\map\FolderMap;
 
 class File extends BaseApp
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Shaobo\QuickLark;
+namespace lbreak\QuickLark;
 
 use Exception;
-use Shaobo\QuickLark\app\BaseApp;
-use Shaobo\QuickLark\app\BiTable;
-use Shaobo\QuickLark\app\File;
-use Shaobo\QuickLark\app\Folder;
-use Shaobo\QuickLark\map\AccessTokenMap;
+use lbreak\QuickLark\app\BaseApp;
+use lbreak\QuickLark\app\BiTable;
+use lbreak\QuickLark\app\File;
+use lbreak\QuickLark\app\Folder;
+use lbreak\QuickLark\map\AccessTokenMap;
 
 /**
  * Class Client
@@ -105,7 +105,7 @@ class Client
      */
     public function __get($field)
     {
-        $appClass = 'Shaobo\QuickLark\app\\' . ucfirst($field);
+        $appClass = 'lbreak\QuickLark\app\\' . ucfirst($field);
         if (isset($this->$field) && $this->$field instanceof $appClass) {
             return $this->$field;
         }

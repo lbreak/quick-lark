@@ -1,9 +1,9 @@
 <?php
 
-namespace Shaobo\QuickLark\example;
+namespace lbreak\QuickLark\example;
 
 use Exception;
-use Shaobo\QuickLark\Client;
+use lbreak\QuickLark\Client;
 
 class FolderTest extends BaseTest
 {

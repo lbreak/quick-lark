@@ -1,5 +1,5 @@
 {
-    "name": "shaobo/quick-lark",
+    "name": "lbreak/quick-lark",
     "description": "Lark sdk for php",
     "type": "library",
     "require-dev": {
@@ -8,12 +8,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Shaobo\\QuickLark\\": "src/"
+            "lbreak\\QuickLark\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "wangshaobo",
+            "name": "wanglbreak",
             "email": "1449689521@qq.com"
         }
     ],

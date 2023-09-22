@@ -22,7 +22,7 @@ class ComposerStaticInit50f3ab9e432de72e7b896760cd26b84a
             'Symfony\\Polyfill\\Php72\\' => 23,
             'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
-            'Shaobo\\QuickLark\\' => 17,
+            'lbreak\\QuickLark\\' => 17,
         ),
         'P' => 
         array (
@@ -49,7 +49,7 @@ class ComposerStaticInit50f3ab9e432de72e7b896760cd26b84a
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-intl-idn',
         ),
-        'Shaobo\\QuickLark\\' => 
+        'lbreak\\QuickLark\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Shaobo\QuickLark\map;
+namespace lbreak\QuickLark\map;
 
 /**
  * Class BiTableMap
- * @package Shaobo\QuickLark\map
+ * @package lbreak\QuickLark\map
  */
 class BiTableMap extends BaseMap {
 

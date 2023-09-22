@@ -1,13 +1,13 @@
 <?php
 
-namespace Shaobo\QuickLark\app;
+namespace lbreak\QuickLark\app;
 
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
-use Shaobo\QuickLark\interfaces\BiTableInterface;
-use Shaobo\QuickLark\map\BiTableMap;
-use Shaobo\QuickLark\map\BiTableTableMap;
-use Shaobo\QuickLark\map\FolderMap;
+use lbreak\QuickLark\interfaces\BiTableInterface;
+use lbreak\QuickLark\map\BiTableMap;
+use lbreak\QuickLark\map\BiTableTableMap;
+use lbreak\QuickLark\map\FolderMap;
 
 class BiTable extends BaseApp
 {

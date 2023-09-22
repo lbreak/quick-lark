@@ -1,5 +1,5 @@
 <?php
-namespace Shaobo\QuickLark\consts;
+namespace lbreak\QuickLark\consts;
 
 class BiTableConst {
 

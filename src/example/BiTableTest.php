@@ -1,9 +1,9 @@
 <?php
 
-namespace Shaobo\QuickLark\example;
+namespace lbreak\QuickLark\example;
 
 use Exception;
-use Shaobo\QuickLark\Client;
+use lbreak\QuickLark\Client;
 
 class BiTableTest extends BaseTest
 {
@@ -12,7 +12,7 @@ class BiTableTest extends BaseTest
     {
         try {
             $client = Client::instance(Client::TYPE_TENANT, self::$appId, self::$appSecret, true);
-            $map = $client->biTable->createBase('shaobo_test_api', 'EdsKfluVFl5EqNd5etTlvbKcg9f');
+            $map = $client->biTable->createBase('lbreak_test_api', 'EdsKfluVFl5EqNd5etTlvbKcg9f');
             var_dump($map->toArray());
         } catch (Exception $e) {
             var_dump($e->getMessage());

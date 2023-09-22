@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Shaobo\QuickLark\map;
+namespace lbreak\QuickLark\map;
 
 /**
  * Class AccessTokenMap
- * @package Shaobo\QuickLark\map
+ * @package lbreak\QuickLark\map
  */
 class AccessTokenMap extends BaseMap
 {
