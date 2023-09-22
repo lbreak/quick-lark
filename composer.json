@@ -1,0 +1,25 @@
+{
+    "name": "shaobo/quick-lark",
+    "description": "Lark sdk for php",
+    "type": "library",
+    "require-dev": {
+        "php": ">=7.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shaobo\\QuickLark\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wangshaobo",
+            "email": "1449689521@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "6.5.x-dev",
+        "ext-json": "*"
+    }
+}
