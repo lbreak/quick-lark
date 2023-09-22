@@ -17,12 +17,15 @@ class ComposerStaticInit50f3ab9e432de72e7b896760cd26b84a
     );
 
     public static $prefixLengthsPsr4 = array (
+        'l' => 
+        array (
+            'lbreak\\QuickLark\\' => 17,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php72\\' => 23,
             'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
-            'lbreak\\QuickLark\\' => 17,
         ),
         'P' => 
         array (
@@ -37,6 +40,10 @@ class ComposerStaticInit50f3ab9e432de72e7b896760cd26b84a
     );
 
     public static $prefixDirsPsr4 = array (
+        'lbreak\\QuickLark\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Symfony\\Polyfill\\Php72\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
@@ -48,10 +55,6 @@ class ComposerStaticInit50f3ab9e432de72e7b896760cd26b84a
         'Symfony\\Polyfill\\Intl\\Idn\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-intl-idn',
-        ),
-        'lbreak\\QuickLark\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (
