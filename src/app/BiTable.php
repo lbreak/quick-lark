@@ -7,6 +7,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use lbreak\QuickLark\interfaces\BiTableInterface;
 use lbreak\QuickLark\map\BiTableMap;
 use lbreak\QuickLark\map\BiTableTableMap;
+use lbreak\QuickLark\map\BiTableViewMap;
 use lbreak\QuickLark\map\FolderMap;
 
 /**
@@ -23,6 +24,8 @@ class BiTable extends BaseApp
     private const URL_BATCH_ADD_RECORD = '/open-apis/bitable/v1/apps/%s/tables/%s/records/batch_create';
     private const URL_DEL_RECORD = '/open-apis/bitable/v1/apps/%s/tables/%s/records/%s';
     private const URL_BATCH_DEL_RECORD = '/open-apis/bitable/v1/apps/%s/tables/%s/records/batch_delete';
+    private const URL_ADD_VIEW = '/open-apis/bitable/v1/apps/%s/tables/%s/views';
+    private const URL_DEL_VIEW = '/open-apis/bitable/v1/apps/%s/tables/%s/views/%s';
 
     /**
      * @param $tableName
@@ -164,6 +167,48 @@ class BiTable extends BaseApp
         ]);
         if ($data['code'] === 0) {
             return BiTableTableMap::init($data['data']);
+        }
+        throw new Exception($data['msg']);
+    }
+
+    /**
+     * @param $appToken
+     * @param $tableId
+     * @param string $viewName
+     * @param string $viewType
+     * @return BiTableViewMap
+     * @throws Exception
+     */
+    public function addView($appToken, $tableId, $viewName = '', $viewType = ''): BiTableViewMap
+    {
+        $options = [
+            'json' => [
+                'view_name' => $viewName,
+                'view_type' => $viewType,
+            ],
+        ];
+
+        $data = $this->httpPost(sprintf(self::URL_ADD_VIEW, $appToken, $tableId), $options);
+        if ($data['code'] === 0) {
+            return BiTableViewMap::init($data['data']);
+        }
+        throw new Exception($data['msg']);
+    }
+
+    /**
+     * @param $appToken
+     * @param $tableId
+     * @param string $viewId
+     * @return bool
+     * @throws GuzzleException
+     * @throws Exception
+     */
+    public function delView($appToken, $tableId, $viewId = ''): bool
+    {
+
+        $data = $this->httpRequest("DELETE", sprintf(self::URL_DEL_VIEW, $appToken, $tableId, $viewId));
+        if ($data['code'] === 0) {
+            return true;
         }
         throw new Exception($data['msg']);
     }
