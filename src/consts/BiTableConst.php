@@ -18,4 +18,10 @@ class BiTableConst {
     public const FIELD_TYPE_1002 = 1002; //最后更新时间
     public const FIELD_TYPE_1003 = 1003; //创建人
     public const FIELD_TYPE_1004 = 1004; //修改人
+
+    public const VIEW_TYPE_GRID = 'grid';//表格视图
+    public const VIEW_TYPE_KANBAN = 'kanban';//看板视图
+    public const VIEW_TYPE_GALLERY = 'gallery';//画册视图
+    public const VIEW_TYPE_GANTT = 'gantt';//甘特视图
+    public const VIEW_TYPE_FORM = 'form';//表单视图
 }
