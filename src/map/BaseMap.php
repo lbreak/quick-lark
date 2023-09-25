@@ -5,13 +5,10 @@ namespace lbreak\QuickLark\map;
 class BaseMap
 {
     private $data = [];
+    private static $_instance = [];
     public function __construct(array $data)
     {
-        if ($data) {
-            foreach ($data as $key => $value) {
-                $this->$key = $value;
-            }
-        }
+        $this->processData($data);
     }
 
     /**
@@ -20,7 +17,21 @@ class BaseMap
      */
     public static function init(array $data): self
     {
-        return (new static($data));
+        if(isset(self::$_instance[static::class]) && self::$_instance[static::class] instanceof static){
+            self::$_instance[static::class]->processData($data);
+            return self::$_instance[static::class];
+        }
+        self::$_instance[static::class] = new static($data);
+        return self::$_instance[static::class];
+    }
+
+    public function processData(array $data) {
+        if ($data) {
+            foreach ($data as $key => $value) {
+                $this->data[$key] = $value;
+                $this->$key = $value;
+            }
+        }
     }
 
     /**

@@ -16,5 +16,5 @@ class BiTableTableMap extends BaseMap {
     public $default_view_id = '';
 
     //数据表初始字段的id列表，该字段仅在请求参数中填写了fields才会返回
-    public $field_id_list = '';
+    public $field_id_list = [];
 }

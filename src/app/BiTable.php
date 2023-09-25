@@ -9,6 +9,11 @@ use lbreak\QuickLark\map\BiTableMap;
 use lbreak\QuickLark\map\BiTableTableMap;
 use lbreak\QuickLark\map\FolderMap;
 
+/**
+ * Class BiTable
+ * @package lbreak\QuickLark\app
+ * @document [https://open.larksuite.com/document/server-docs/docs/bitable-v1/bitable-overview]
+ */
 class BiTable extends BaseApp
 {
 
@@ -73,17 +78,21 @@ class BiTable extends BaseApp
      * @return BiTableTableMap
      * @throws Exception
      */
-    public function addRecords($appToken, $tableId, array $record = [], $userIdType = '', $clientToken = ''): BiTableTableMap
+    public function addRecord($appToken, $tableId, array $record = [], $userIdType = '', $clientToken = ''): BiTableTableMap
     {
-        $data = $this->httpPost(sprintf(self::URL_ADD_RECORD, $appToken, $tableId), [
+        $options = [
             'json' => [
                 'fields' => $record
             ],
-            'query' => [
-                'user_id_type' => $userIdType,
-                'client_type' => $clientToken
-            ]
-        ]);
+            'query' => [],
+        ];
+        if($userIdType) {
+            $options['query']['user_id_type'] = $userIdType;
+        }
+        if($clientToken){
+            $options['query']['client_type'] = $clientToken;
+        }
+        $data = $this->httpPost(sprintf(self::URL_ADD_RECORD, $appToken, $tableId), $options);
         if ($data['code'] === 0) {
             return BiTableTableMap::init($data['data']);
         }
@@ -101,15 +110,19 @@ class BiTable extends BaseApp
      */
     public function batchAddRecords($appToken, $tableId, array $records = [], $userIdType = '', $clientToken = ''): BiTableTableMap
     {
-        $data = $this->httpPost(sprintf(self::URL_BATCH_ADD_RECORD, $appToken, $tableId), [
+        $options = [
             'json' => [
                 'records' => $records
             ],
-            'query' => [
-                'user_id_type' => $userIdType,
-                'client_type' => $clientToken
-            ]
-        ]);
+            'query' => [],
+        ];
+        if($userIdType) {
+            $options['query']['user_id_type'] = $userIdType;
+        }
+        if($clientToken){
+            $options['query']['client_type'] = $clientToken;
+        }
+        $data = $this->httpPost(sprintf(self::URL_BATCH_ADD_RECORD, $appToken, $tableId), $options);
         if ($data['code'] === 0) {
             return BiTableTableMap::init($data['data']);
         }
