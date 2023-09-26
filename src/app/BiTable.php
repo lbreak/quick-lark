@@ -42,7 +42,7 @@ class BiTable extends BaseApp
             ]
         ]);
         if ($data['code'] === 0) {
-            return BiTableMap::init($data['data']);
+            return BiTableMap::init($data['data']['app']);
         }
         throw new Exception($data['msg']);
     }
